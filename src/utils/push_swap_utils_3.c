@@ -6,20 +6,14 @@
 /*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/10 15:53:48 by pibreiss          #+#    #+#             */
-/*   Updated: 2025/01/13 18:33:23 by pibreiss         ###   ########.fr       */
+/*   Updated: 2025/01/17 16:26:40 by pibreiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-int	stack_size(int	*stack, int max_size)
+void	set_size(int *size_stack_a, int *size_stack_b, int ac, char **av)
 {
-	int	size;
-
-	size = 0;
-	while (stack[size] && size < max_size)
-	{
-		size++;
-	}
-	return (size);
+	*size_stack_a = count_int(ac, av);
+	*size_stack_b = 0;
 }
