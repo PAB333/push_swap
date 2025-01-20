@@ -6,7 +6,7 @@
 /*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 18:10:03 by pibreiss          #+#    #+#             */
-/*   Updated: 2025/01/13 19:54:10 by pibreiss         ###   ########.fr       */
+/*   Updated: 2025/01/20 17:08:28 by pibreiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ void	rotate_a(int *stack_a)
 	write(1, "ra\n", 3);
 }
 
-#include <stdio.h>
 void	rotate_b(int *stack_b)
 {
 	int	temp;

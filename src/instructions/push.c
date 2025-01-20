@@ -6,7 +6,7 @@
 /*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 18:09:53 by pibreiss          #+#    #+#             */
-/*   Updated: 2025/01/17 16:40:25 by pibreiss         ###   ########.fr       */
+/*   Updated: 2025/01/20 17:08:51 by pibreiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	push_a(int *stack_a, int *stack_b, int *size_a, int *size_b)
 
 	i = *size_a;
 	if (size_b == 0)
-		return;
+		return ;
 	while (i > 0)
 	{
 		stack_a[i] = stack_a[i - 1];
@@ -42,7 +42,7 @@ void	push_b(int *stack_a, int *stack_b, int *size_a, int *size_b)
 
 	i = *size_b;
 	if (size_a == 0)
-		return;
+		return ;
 	while (i > 0)
 	{
 		stack_b[i] = stack_b[i - 1];

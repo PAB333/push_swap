@@ -6,7 +6,7 @@
 /*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 17:32:40 by pibreiss          #+#    #+#             */
-/*   Updated: 2025/01/09 17:27:14 by pibreiss         ###   ########.fr       */
+/*   Updated: 2025/01/20 17:07:49 by pibreiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ void	error_and_exit(void)
 	write(2, "Error\n", 6);
 	exit(0);
 }
+
 void	char_error_check(int argc, char **argv)
 {
 	int	i;
