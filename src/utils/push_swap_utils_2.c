@@ -6,7 +6,7 @@
 /*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 17:32:40 by pibreiss          #+#    #+#             */
-/*   Updated: 2025/01/20 17:07:49 by pibreiss         ###   ########.fr       */
+/*   Updated: 2025/01/23 16:32:10 by pibreiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,18 +80,16 @@ int	double_check(int *stack_a, int argc, char **argv)
 	return (-1);
 }
 
-int	it_is_sorted(int *stack_a, int argc, char **argv)
+int	it_is_sorted(int *stack_a, int size_stack_a)
 {
 	int	i;
 	int	j;
-	int	size;
 
 	i = 0;
-	size = count_int(argc, argv);
-	while (i < size)
+	while (i < size_stack_a)
 	{
 		j = i + 1;
-		while (j < size)
+		while (j < size_stack_a)
 		{
 			if (stack_a[i] > stack_a[j])
 				return (-1);
