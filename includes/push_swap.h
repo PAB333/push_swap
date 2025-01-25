@@ -6,7 +6,7 @@
 /*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 17:36:23 by pibreiss          #+#    #+#             */
-/*   Updated: 2025/01/24 19:20:00 by pibreiss         ###   ########.fr       */
+/*   Updated: 2025/01/25 19:18:59 by pibreiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	rrr(int *stack_a, int *stack_b, int size_stack_a, int size_stack_b);
 void	sort_3_numbers(int *stack_a, int size_stack_a);
 void	set_size(int *size_stack_a, int *size_stack_b, int ac, char **av);
 void	sort_big_numbers(int *stack_a, int *stack_b, int *size_a, int *size_b);
-int		calculate_rotate(int *stack_a, int *stack_b, int s_a, int s_b, int pos);
+int		calculate_rotate_ab(int *stack_a, int *stack_b, int s_a, int s_b, int pos);
 int		find_place_in_b(int *stack_a, int *stack_b, int s_b, int pos);
 int		find_place_in_b_w_nbr(int *stack_b, int s_b, int nbr);
 int		calculate_rrr(int *stack_a, int *stack_b, int s_a, int s_b, int pos);
@@ -52,5 +52,6 @@ int		apply_rr(int *stack_a, int *stack_b, int *s_a, int *s_b, int pos);
 int		apply_rarrb(int *stack_a, int *stack_b, int *s_a, int *s_b, int pos);
 int		apply_rrarb(int *stack_a, int *stack_b, int *s_a, int *s_b, int pos);
 int		apply_rrr(int *stack_a, int *stack_b, int *s_a, int *s_b, int pos);
+int		find_max_value(int *stack, int size);
 
 #endif

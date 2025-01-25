@@ -6,11 +6,12 @@
 /*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 18:23:56 by pibreiss          #+#    #+#             */
-/*   Updated: 2025/01/24 19:25:32 by pibreiss         ###   ########.fr       */
+/*   Updated: 2025/01/25 19:00:29 by pibreiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
+#include <stdio.h>
 
 int	apply_rr(int *stack_a, int *stack_b, int *s_a, int *s_b, int pos)
 {
@@ -45,8 +46,13 @@ int	apply_rrarb(int *stack_a, int *stack_b, int *s_a, int *s_b, int pos)
 	int	nbr;
 
 	nbr = stack_a[pos];
+	printf("%d\n", nbr);
+	printf("%d\n", pos);
 	while (stack_a[0] != nbr)
+	{
+		usleep(500000);
 		reverse_rotate_a(stack_a, *s_a);
+	}
 	while (find_place_in_b_w_nbr(stack_b, *s_b, nbr) > 0)
 		rotate_b(stack_b);
 	push_b(stack_a, stack_b, s_a, s_b);

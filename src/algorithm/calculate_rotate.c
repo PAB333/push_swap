@@ -6,7 +6,7 @@
 /*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 16:40:08 by pibreiss          #+#    #+#             */
-/*   Updated: 2025/01/24 18:08:48 by pibreiss         ###   ########.fr       */
+/*   Updated: 2025/01/25 18:47:24 by pibreiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int	calculate_rrr(int *stack_a, int *stack_b, int s_a, int s_b, int pos)
 	return (i);
 }
 
-int	calculate_rotate(int *stack_a, int *stack_b, int s_a, int s_b, int pos)
+int	calculate_rotate_ab(int *stack_a, int *stack_b, int s_a, int s_b, int pos)
 {
 	int	i;
 	int	j;
