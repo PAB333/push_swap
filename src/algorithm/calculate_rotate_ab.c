@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   calculate_rotate.c                                 :+:      :+:    :+:   */
+/*   calculate_rotate_ab.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 16:40:08 by pibreiss          #+#    #+#             */
-/*   Updated: 2025/01/25 18:47:24 by pibreiss         ###   ########.fr       */
+/*   Updated: 2025/01/26 01:03:51 by pibreiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-int	calculate_rrarb(int *stack_a, int *stack_b, int s_a, int s_b, int pos)
+int	calculate_rrarb_b(int *stack_a, int *stack_b, int s_a, int s_b, int pos)
 {
 	int	i;
 
@@ -23,7 +23,7 @@ int	calculate_rrarb(int *stack_a, int *stack_b, int s_a, int s_b, int pos)
 	return (i);
 }
 
-int	calculate_rarrb(int *stack_a, int *stack_b, int s_b, int pos)
+int	calculate_rarrb_b(int *stack_a, int *stack_b, int s_b, int pos)
 {
 	int	i;
 
@@ -34,7 +34,7 @@ int	calculate_rarrb(int *stack_a, int *stack_b, int s_b, int pos)
 	return (i);
 }
 
-int	calculate_rr(int *stack_a, int *stack_b, int s_b, int pos)
+int	calculate_rr_b(int *stack_a, int *stack_b, int s_b, int pos)
 {
 	int	i;
 
@@ -44,7 +44,7 @@ int	calculate_rr(int *stack_a, int *stack_b, int s_b, int pos)
 	return (i);
 }
 
-int	calculate_rrr(int *stack_a, int *stack_b, int s_a, int s_b, int pos)
+int	calculate_rrr_b(int *stack_a, int *stack_b, int s_a, int s_b, int pos)
 {
 	int	i;
 
@@ -62,17 +62,17 @@ int	calculate_rotate_ab(int *stack_a, int *stack_b, int s_a, int s_b, int pos)
 	int	j;
 
 	j = 0;
-	i = calculate_rrr(stack_a, stack_b, s_a, s_b, pos);
+	i = calculate_rrr_b(stack_a, stack_b, s_a, s_b, pos);
 	while (j < s_a)
 	{
-		if (i > calculate_rr(stack_a, stack_b, s_b, pos))
-			i = calculate_rr(stack_a, stack_b, s_b, pos);
-		if (i > calculate_rrr(stack_a, stack_b, s_a, s_b, pos))
-			i = calculate_rrr(stack_a, stack_b, s_a, s_b, pos);
-		if (i > calculate_rarrb(stack_a, stack_b, s_b, pos))
-			i = calculate_rarrb(stack_a, stack_b, s_b, pos);
-		if (i > calculate_rrarb(stack_a, stack_b, s_a, s_b, pos))
-			i = calculate_rrarb(stack_a, stack_b, s_a, s_b, pos);
+		if (i > calculate_rr_b(stack_a, stack_b, s_b, pos))
+			i = calculate_rr_b(stack_a, stack_b, s_b, pos);
+		if (i > calculate_rrr_b(stack_a, stack_b, s_a, s_b, pos))
+			i = calculate_rrr_b(stack_a, stack_b, s_a, s_b, pos);
+		if (i > calculate_rarrb_b(stack_a, stack_b, s_b, pos))
+			i = calculate_rarrb_b(stack_a, stack_b, s_b, pos);
+		if (i > calculate_rrarb_b(stack_a, stack_b, s_a, s_b, pos))
+			i = calculate_rrarb_b(stack_a, stack_b, s_a, s_b, pos);
 		j++;
 	}
 	return (i);

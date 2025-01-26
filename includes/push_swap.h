@@ -6,7 +6,7 @@
 /*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 17:36:23 by pibreiss          #+#    #+#             */
-/*   Updated: 2025/01/25 19:18:59 by pibreiss         ###   ########.fr       */
+/*   Updated: 2025/01/26 01:53:53 by pibreiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,14 +44,26 @@ void	sort_big_numbers(int *stack_a, int *stack_b, int *size_a, int *size_b);
 int		calculate_rotate_ab(int *stack_a, int *stack_b, int s_a, int s_b, int pos);
 int		find_place_in_b(int *stack_a, int *stack_b, int s_b, int pos);
 int		find_place_in_b_w_nbr(int *stack_b, int s_b, int nbr);
-int		calculate_rrr(int *stack_a, int *stack_b, int s_a, int s_b, int pos);
-int		calculate_rr(int *stack_a, int *stack_b, int s_b, int pos);
-int		calculate_rarrb(int *stack_a, int *stack_b, int s_b, int pos);
-int		calculate_rrarb(int *stack_a, int *stack_b, int s_a, int s_b, int pos);
-int		apply_rr(int *stack_a, int *stack_b, int *s_a, int *s_b, int pos);
-int		apply_rarrb(int *stack_a, int *stack_b, int *s_a, int *s_b, int pos);
-int		apply_rrarb(int *stack_a, int *stack_b, int *s_a, int *s_b, int pos);
-int		apply_rrr(int *stack_a, int *stack_b, int *s_a, int *s_b, int pos);
+int		calculate_rrr_b(int *stack_a, int *stack_b, int s_a, int s_b, int pos);
+int		calculate_rr_b(int *stack_a, int *stack_b, int s_b, int pos);
+int		calculate_rarrb_b(int *stack_a, int *stack_b, int s_b, int pos);
+int		calculate_rrarb_b(int *stack_a, int *stack_b, int s_a, int s_b, int pos);
+int		apply_rr_ab(int *stack_a, int *stack_b, int *s_a, int *s_b, int pos);
+int		apply_rarrb_ab(int *stack_a, int *stack_b, int *s_a, int *s_b, int pos);
+int		apply_rrarb_ab(int *stack_a, int *stack_b, int *s_a, int *s_b, int pos);
+int		apply_rrr_ab(int *stack_a, int *stack_b, int *s_a, int *s_b, int pos);
 int		find_max_value(int *stack, int size);
+int		find_min_value(int *stack, int size);
+int		find_place_in_a(int *stack_a, int *stack_b, int s_a, int pos);
+int		find_place_in_a_w_nbr(int *stack_a, int s_a, int nbr);
+int		calculate_rotate_ba(int *stack_a, int *stack_b, int s_a, int s_b, int pos);
+int		calculate_rrr_a(int *stack_a, int *stack_b, int s_a, int s_b, int pos);
+int		calculate_rr_a(int *stack_a, int *stack_b, int s_a, int pos);
+int		calculate_rarrb_a(int *stack_a, int *stack_b, int s_a, int s_b, int pos);
+int		calculate_rrarb_a(int *stack_a, int *stack_b, int s_a, int pos);
+int		apply_rr_ba(int *stack_a, int *stack_b, int *s_a, int *s_b, int pos);
+int		apply_rarrb_ba(int *stack_a, int *stack_b, int *s_a, int *s_b, int pos);
+int		apply_rrarb_ba(int *stack_a, int *stack_b, int *s_a, int *s_b, int pos);
+int		apply_rrr_ba(int *stack_a, int *stack_b, int *s_a, int *s_b, int pos);
 
 #endif
