@@ -6,18 +6,18 @@
 /*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 18:09:53 by pibreiss          #+#    #+#             */
-/*   Updated: 2025/01/20 17:08:51 by pibreiss         ###   ########.fr       */
+/*   Updated: 2025/01/27 02:16:49 by pibreiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-void	push_a(int *stack_a, int *stack_b, int *size_a, int *size_b)
+void	push_a(int *stack_a, int *stack_b, int *size_stack)
 {
 	int	i;
 
-	i = *size_a;
-	if (size_b == 0)
+	i = size_stack[0];
+	if (size_stack[1] == 0)
 		return ;
 	while (i > 0)
 	{
@@ -26,22 +26,22 @@ void	push_a(int *stack_a, int *stack_b, int *size_a, int *size_b)
 	}
 	stack_a[0] = stack_b[0];
 	i = 0;
-	while (i < *size_b)
+	while (i < size_stack[1])
 	{
 		stack_b[i] = stack_b[i + 1];
 		i++;
 	}
-	(*size_a)++;
-	(*size_b)--;
+	size_stack[0]++;
+	size_stack[1]--;
 	write(1, "pa\n", 3);
 }
 
-void	push_b(int *stack_a, int *stack_b, int *size_a, int *size_b)
+void	push_b(int *stack_a, int *stack_b, int *size_stack)
 {
 	int	i;
 
-	i = *size_b;
-	if (size_a == 0)
+	i = size_stack[1];
+	if (size_stack[0] == 0)
 		return ;
 	while (i > 0)
 	{
@@ -50,12 +50,12 @@ void	push_b(int *stack_a, int *stack_b, int *size_a, int *size_b)
 	}
 	stack_b[0] = stack_a[0];
 	i = 0;
-	while (i < *size_a)
+	while (i < size_stack[0])
 	{
 		stack_a[i] = stack_a[i + 1];
 		i++;
 	}
-	(*size_b)++;
-	(*size_a)--;
+	size_stack[1]++;
+	size_stack[0]--;
 	write(1, "pb\n", 3);
 }

@@ -6,7 +6,7 @@
 /*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 18:05:58 by pibreiss          #+#    #+#             */
-/*   Updated: 2025/01/23 16:31:08 by pibreiss         ###   ########.fr       */
+/*   Updated: 2025/01/27 01:44:11 by pibreiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,11 +91,11 @@ int	*array_to_array_of_int(int argc, char **argv, int *stack_a)
 	return (stack_a);
 }
 
-int	*fill_stack(int argc, char **argv, int size_stack_a)
+int	*fill_stack(int argc, char **argv, int *size_stack)
 {
 	int	*stack_a;
 
-	stack_a = (int *)malloc(sizeof(int) * size_stack_a);
+	stack_a = (int *)malloc(sizeof(int) * size_stack[0]);
 	if (!stack_a)
 		return (0);
 	if (argc == 2)
@@ -105,12 +105,14 @@ int	*fill_stack(int argc, char **argv, int size_stack_a)
 	if (!double_check(stack_a, argc, argv))
 	{
 		free(stack_a);
+		free(size_stack);
 		write(2, "Error\n", 6);
 		exit(0);
 	}
-	if (!it_is_sorted(stack_a, size_stack_a))
+	if (!it_is_sorted(stack_a, size_stack[0]))
 	{
 		free(stack_a);
+		free(size_stack);
 		exit(0);
 	}
 	return (stack_a);

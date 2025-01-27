@@ -6,7 +6,7 @@
 /*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 18:10:56 by pibreiss          #+#    #+#             */
-/*   Updated: 2025/01/20 17:06:14 by pibreiss         ###   ########.fr       */
+/*   Updated: 2025/01/27 02:06:11 by pibreiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,12 +44,12 @@ void	reverse_rotate_b(int *stack_b, int size_stack_b)
 	write(1, "rrb\n", 4);
 }
 
-void	rrr(int *stack_a, int *stack_b, int size_stack_a, int size_stack_b)
+void	rrr(int *stack_a, int *stack_b, int *size)
 {
 	int	temp;
 	int	i;
 
-	i = size_stack_a - 1;
+	i = size[0] - 1;
 	temp = stack_a[i];
 	while (i != 0)
 	{
@@ -57,7 +57,7 @@ void	rrr(int *stack_a, int *stack_b, int size_stack_a, int size_stack_b)
 		i--;
 	}
 	stack_a[i] = temp;
-	i = size_stack_b - 1;
+	i = size[1] - 1;
 	temp = stack_b[i];
 	while (i != 0)
 	{
