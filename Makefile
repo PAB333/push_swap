@@ -6,7 +6,7 @@
 #    By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/03 17:36:56 by pibreiss          #+#    #+#              #
-#    Updated: 2025/01/04 15:31:51 by pibreiss         ###   ########.fr        #
+#    Updated: 2025/01/27 02:42:01 by pibreiss         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,15 +16,20 @@ CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror
 
-SRC = src/instructions/*.c \
+SRC = 	src/instructions/*.c \
+		src/algorithm/*.c \
+		src/main/main.c \
+		src/utils/*.c
 
-$(NAME):
+OBJ = $(SRC:.c=.o)
+
+$(NAME): $(OBJ)
 	$(CC) $(CFLAGS) $(SRC) -Iincludes -o $(NAME)
 
 all : $(NAME)
 
 clean :
-	rm -rf src/*.o
+	rm -rf $(OBJ)
 
 fclean : clean
 	rm -rf $(NAME)
