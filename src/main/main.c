@@ -6,13 +6,11 @@
 /*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 15:26:34 by pibreiss          #+#    #+#             */
-/*   Updated: 2025/01/23 16:33:10 by pibreiss         ###   ########.fr       */
+/*   Updated: 2025/01/27 01:10:33 by pibreiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
-
-#include <stdio.h>
 
 int	main(int argc, char **argv)
 {
@@ -20,9 +18,7 @@ int	main(int argc, char **argv)
 	int		*stack_b;
 	int		size_stack_a;
 	int		size_stack_b;
-	int		i;
 
-	i = 0;
 	char_error_check(argc, argv);
 	set_size(&size_stack_a, &size_stack_b, argc, argv);
 	stack_a = fill_stack(argc, argv, size_stack_a);
@@ -35,18 +31,6 @@ int	main(int argc, char **argv)
 		sort_3_numbers(stack_a, size_stack_a);
 	else if (size_stack_a > 3)
 		sort_big_numbers(stack_a, stack_b, &size_stack_a, &size_stack_b);
-	while (i < size_stack_a)
-	{
-		printf("%d ",stack_a[i]);
-		i++;
-	}
-	i = 0;
-	printf("\n");
-	while (i < size_stack_b)
-	{
-		printf("%d ",stack_b[i]);
-		i++;
-	}
 	free(stack_a);
 	free(stack_b);
 }

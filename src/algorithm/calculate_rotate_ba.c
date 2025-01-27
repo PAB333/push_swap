@@ -6,7 +6,7 @@
 /*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/26 00:58:26 by pibreiss          #+#    #+#             */
-/*   Updated: 2025/01/26 01:46:48 by pibreiss         ###   ########.fr       */
+/*   Updated: 2025/01/27 00:09:20 by pibreiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ int	calculate_rarrb_a(int *stack_a, int *stack_b, int s_a, int s_b, int pos)
 {
 	int	i;
 
+	i = 0;
 	if (pos != 0)
 		i = s_b - pos;
 	i = find_place_in_a(stack_a, stack_b, s_a, pos) + i;
@@ -50,7 +51,7 @@ int	calculate_rrr_a(int *stack_a, int *stack_b, int s_a, int s_b, int pos)
 	i = 0;
 	if (find_place_in_a(stack_a, stack_b, s_a, pos))
 		i = s_a - find_place_in_a(stack_a, stack_b, s_a, pos);
-	if (i < (s_b - pos))
+	if (pos != 0 && i < (s_b - pos))
 		i = s_b - pos;
 	return (i);
 }

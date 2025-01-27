@@ -6,7 +6,7 @@
 /*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 17:21:48 by pibreiss          #+#    #+#             */
-/*   Updated: 2025/01/26 02:22:53 by pibreiss         ###   ########.fr       */
+/*   Updated: 2025/01/27 01:14:00 by pibreiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,24 +64,28 @@ void	sort_b(int *stack_a, int *stack_b, int *s_a, int *s_b)
 
 void	sort_big_numbers(int *stack_a, int *stack_b, int *size_a, int *size_b)
 {
-// 	int	i;
+	int	i;
 
-// 	i = 0;
+	i = 0;
 	push_b(stack_a, stack_b, size_a, size_b);
-	if (*size_a > 3)
+	if (*size_a > 3 && it_is_sorted(stack_a, *size_a))
 		push_b(stack_a, stack_b, size_a, size_b);
-	sort_b(stack_a, stack_b, size_a, size_b);
+	if (*size_a > 3 && it_is_sorted(stack_a, *size_a))
+		sort_b(stack_a, stack_b, size_a, size_b);
 	if (*size_a == 3)
 		sort_3_numbers(stack_a, *size_a);
+	while (stack_b[0] != find_max_value(stack_b, *size_b))
+		reverse_rotate_b(stack_b, *size_b);
 	sort_a(stack_a, stack_b, size_a, size_b);
-	// while (i != find_min_value(stack_a, *size_a))
-	// 	i++;
-	// if (i < *size_a - i)
-	// {
-	// 	while (stack_a[0] != find_min_value(stack_a, *size_a))
-	// 		rotate_a(stack_a);
-	// }
-	// else
-	// 	while (stack_a[0] != find_min_value(stack_a, *size_a))
-	// 		reverse_rotate_a(stack_a, *size_a);
+	while (i != find_min_value(stack_a, *size_a)
+		&& it_is_sorted(stack_a, *size_a))
+		i++;
+	if (i < *size_a - i)
+	{
+		while (stack_a[0] != find_min_value(stack_a, *size_a))
+			rotate_a(stack_a);
+	}
+	else
+		while (stack_a[0] != find_min_value(stack_a, *size_a))
+			reverse_rotate_a(stack_a, *size_a);
 }
