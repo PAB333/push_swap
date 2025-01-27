@@ -6,7 +6,7 @@
 /*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 15:26:34 by pibreiss          #+#    #+#             */
-/*   Updated: 2025/01/27 02:34:03 by pibreiss         ###   ########.fr       */
+/*   Updated: 2025/01/27 16:56:56 by pibreiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,10 @@ int	main(int argc, char **argv)
 	stack_a = fill_stack(argc, argv, size_stack);
 	stack_b = (int *)malloc(sizeof(int) * count_int(argc, argv));
 	if (!stack_b)
+	{
+		free(size_stack);
 		return (0);
+	}
 	if (size_stack[0] == 2)
 		swap_a(stack_a, size_stack[0]);
 	else if (size_stack[0] == 3)
