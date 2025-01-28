@@ -6,7 +6,7 @@
 /*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 17:21:48 by pibreiss          #+#    #+#             */
-/*   Updated: 2025/01/27 02:30:17 by pibreiss         ###   ########.fr       */
+/*   Updated: 2025/01/28 01:56:25 by pibreiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ void	sort_big_numbers(int *stack_a, int *stack_b, int *size_stack)
 	while (stack_b[0] != find_max_value(stack_b, size_stack[1]))
 		reverse_rotate_b(stack_b, size_stack[1]);
 	sort_a(stack_a, stack_b, size_stack);
-	while (i != find_min_value(stack_a, size_stack[0])
+	while (stack_a[i] != find_min_value(stack_a, size_stack[0])
 		&& it_is_sorted(stack_a, size_stack[0]))
 		i++;
 	if (i < size_stack[0] - i)
