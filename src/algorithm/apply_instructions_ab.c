@@ -6,7 +6,7 @@
 /*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 18:23:56 by pibreiss          #+#    #+#             */
-/*   Updated: 2025/01/27 02:34:35 by pibreiss         ###   ########.fr       */
+/*   Updated: 2025/01/31 11:24:51 by pibreiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ int	apply_rr_ab(int *stack_a, int *stack_b, int *size, int pos)
 	nbr = stack_a[pos];
 	while (stack_a[0] != nbr
 		&& find_place_in_b_w_nbr(stack_b, size[1], nbr) > 0)
-		rotate_a_and_b(stack_a, stack_b);
+		rotate_a_and_b(stack_a, stack_b, size);
 	while (stack_a[0] != nbr)
-		rotate_a(stack_a);
+		rotate_a(stack_a, size[0]);
 	while (find_place_in_b_w_nbr(stack_b, size[1], nbr) > 0)
-		rotate_b(stack_b);
+		rotate_b(stack_b, size[1]);
 	push_b(stack_a, stack_b, size);
 	return (-1);
 }
@@ -34,7 +34,7 @@ int	apply_rarrb_ab(int *stack_a, int *stack_b, int *size, int pos)
 
 	nbr = stack_a[pos];
 	while (stack_a[0] != nbr)
-		rotate_a(stack_a);
+		rotate_a(stack_a, size[0]);
 	while (find_place_in_b_w_nbr(stack_b, size[1], nbr) > 0)
 		reverse_rotate_b(stack_b, size[1]);
 	push_b(stack_a, stack_b, size);
@@ -49,7 +49,7 @@ int	apply_rrarb_ab(int *stack_a, int *stack_b, int *size, int pos)
 	while (stack_a[0] != nbr)
 		reverse_rotate_a(stack_a, size[0]);
 	while (find_place_in_b_w_nbr(stack_b, size[1], nbr) > 0)
-		rotate_b(stack_b);
+		rotate_b(stack_b, size[1]);
 	push_b(stack_a, stack_b, size);
 	return (-1);
 }

@@ -6,7 +6,7 @@
 /*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 17:36:23 by pibreiss          #+#    #+#             */
-/*   Updated: 2025/01/27 02:31:51 by pibreiss         ###   ########.fr       */
+/*   Updated: 2025/01/31 11:23:58 by pibreiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ void	swap_b(int *stack_b, int size_stack_b);
 void	swap_a_and_swap_b(int *a, int *b, int size_stack_a, int size_stack_b);
 void	push_a(int *stack_a, int *stack_b, int *size_stack);
 void	push_b(int *stack_a, int *stack_b, int *size_stack);
-void	rotate_a(int *stack_a);
-void	rotate_b(int *stack_b);
-void	rotate_a_and_b(int *stack_a, int *stack_b);
+void	rotate_a(int *stack_a, int size_a);
+void	rotate_b(int *stack_b, int size_b);
+void	rotate_a_and_b(int *stack_a, int *stack_b, int *size);
 void	reverse_rotate_a(int *stack_a, int size_stack_a);
 void	reverse_rotate_b(int *stack_b, int size_stack_b);
 void	rrr(int *stack_a, int *stack_b, int *size);

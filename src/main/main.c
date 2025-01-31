@@ -6,7 +6,7 @@
 /*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 15:26:34 by pibreiss          #+#    #+#             */
-/*   Updated: 2025/01/28 01:57:07 by pibreiss         ###   ########.fr       */
+/*   Updated: 2025/01/31 11:19:12 by pibreiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	main(int argc, char **argv)
 	int		*size_stack;
 
 	char_error_check(argc, argv);
-	size_stack = (int *)malloc(sizeof(int));
+	size_stack = (int *)malloc(sizeof(int) * 2);
 	set_size(size_stack, argc, argv);
 	stack_a = fill_stack(argc, argv, size_stack);
 	stack_b = (int *)malloc(sizeof(int) * count_int(argc, argv));
