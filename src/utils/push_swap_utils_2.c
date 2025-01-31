@@ -6,7 +6,7 @@
 /*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 17:32:40 by pibreiss          #+#    #+#             */
-/*   Updated: 2025/01/27 01:43:30 by pibreiss         ###   ########.fr       */
+/*   Updated: 2025/01/31 11:46:10 by pibreiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,6 @@ void	char_error_check(int argc, char **argv)
 	while (i < argc)
 	{
 		j = 0;
-		if (argv[i][0] == ' ' || argv[i][ft_strlen(argv[i]) - 1] == ' ')
-			error_and_exit();
 		while (argv[i][j])
 		{
 			if (!(argv[i][j] >= '0' && argv[i][j] <= '9') && argv[i][j] != ' ')
@@ -38,8 +36,6 @@ void	char_error_check(int argc, char **argv)
 				if (argv[i][j] != '-' && argv[i][j] != '+')
 					error_and_exit();
 			}
-			if (argv[i][j] == ' ' && argv[i][j + 1] == ' ')
-				error_and_exit();
 			j++;
 		}
 		i++;

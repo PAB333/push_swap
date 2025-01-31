@@ -6,7 +6,7 @@
 /*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 14:54:32 by pibreiss          #+#    #+#             */
-/*   Updated: 2025/01/20 17:13:40 by pibreiss         ###   ########.fr       */
+/*   Updated: 2025/01/31 11:54:53 by pibreiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ long	ft_atoi(char *nbr)
 	i = 0;
 	sign = 1;
 	result = 0;
-	while ((nbr[i] >= 9 && nbr[i] <= 13) || nbr[i] == ' ')
-		i++;
 	if (nbr[i] == '-' || nbr[i] == '+')
 	{
+		while (nbr[i + 1] == '-' || nbr[i + 1] == '+')
+			i++;
 		if (nbr[i] == '-')
 			sign *= -1;
 		i++;
