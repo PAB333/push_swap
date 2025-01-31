@@ -6,7 +6,7 @@
 /*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/26 00:58:26 by pibreiss          #+#    #+#             */
-/*   Updated: 2025/01/27 02:23:29 by pibreiss         ###   ########.fr       */
+/*   Updated: 2025/01/31 04:50:29 by pibreiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,7 @@ int	calculate_rotate_ba(int *stack_a, int *stack_b, int *size, int pos)
 			i = calculate_rarrb_a(stack_a, stack_b, size, pos);
 		if (i > calculate_rrarb_a(stack_a, stack_b, size[0], pos))
 			i = calculate_rrarb_a(stack_a, stack_b, size[0], pos);
+		pos++;
 		j++;
 	}
 	return (i);
