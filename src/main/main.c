@@ -6,7 +6,7 @@
 /*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 15:26:34 by pibreiss          #+#    #+#             */
-/*   Updated: 2025/02/03 17:44:37 by pibreiss         ###   ########.fr       */
+/*   Updated: 2025/03/22 18:25:08 by pibreiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ int	main(int argc, char **argv)
 		sort_3_numbers(stack_a, size_stack[0]);
 	else if (size_stack[0] > 3)
 		sort_big_numbers(stack_a, stack_b, size_stack);
+	i = 0;
 	while (i < size_stack[0])
 	{
 		printf("%d ", stack_a[i]);

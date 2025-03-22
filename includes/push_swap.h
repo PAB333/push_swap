@@ -6,7 +6,7 @@
 /*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 17:36:23 by pibreiss          #+#    #+#             */
-/*   Updated: 2025/01/31 11:23:58 by pibreiss         ###   ########.fr       */
+/*   Updated: 2025/03/22 21:24:16 by pibreiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+#include <stdio.h>
 
 int		ft_strlen(char *str);
 int		count_int(int argc, char **argv);

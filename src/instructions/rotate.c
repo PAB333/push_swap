@@ -6,7 +6,7 @@
 /*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 18:10:03 by pibreiss          #+#    #+#             */
-/*   Updated: 2025/01/31 11:31:16 by pibreiss         ###   ########.fr       */
+/*   Updated: 2025/03/22 18:24:45 by pibreiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@ void	rotate_a(int *stack_a, int size_a)
 
 	temp = stack_a[0];
 	i = 0;
-	while (i < size_a)
+	while (i < size_a - 1)
 	{
 		stack_a[i] = stack_a[i + 1];
 		i++;
 	}
-	stack_a[i - 1] = temp;
+	stack_a[i] = temp;
 	write(1, "ra\n", 3);
 }
 

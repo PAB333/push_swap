@@ -6,7 +6,7 @@
 /*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 17:07:30 by pibreiss          #+#    #+#             */
-/*   Updated: 2025/01/27 01:14:40 by pibreiss         ###   ########.fr       */
+/*   Updated: 2025/03/22 21:51:34 by pibreiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ int	find_place_in_b(int *stack_a, int *stack_b, int s_b, int pos)
 	{
 		while (stack_b[j] != find_max_value(stack_b, s_b))
 			j++;
-		i = j;
+		i = j - 1;
 	}
 	else
 	{
@@ -86,7 +86,7 @@ int	find_place_in_b_w_nbr(int *stack_b, int s_b, int nbr)
 	{
 		while (stack_b[j] != find_max_value(stack_b, s_b))
 			j++;
-		i = j;
+		i = j - 1;
 	}
 	else
 	{

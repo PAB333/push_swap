@@ -6,7 +6,7 @@
 /*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 17:32:40 by pibreiss          #+#    #+#             */
-/*   Updated: 2025/01/31 11:46:10 by pibreiss         ###   ########.fr       */
+/*   Updated: 2025/03/22 18:21:05 by pibreiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,10 @@ void	char_error_check(int argc, char **argv)
 
 	i = 1;
 	if (argc < 2)
+	{
+		write(1, "Error : Nothing to sort\n", 24);
 		exit(0);
+	}
 	while (i < argc)
 	{
 		j = 0;

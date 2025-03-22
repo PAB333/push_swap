@@ -6,7 +6,7 @@
 /*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/26 00:58:26 by pibreiss          #+#    #+#             */
-/*   Updated: 2025/01/31 04:50:29 by pibreiss         ###   ########.fr       */
+/*   Updated: 2025/03/22 22:06:40 by pibreiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,12 +58,10 @@ int	calculate_rrr_a(int *stack_a, int *stack_b, int *size, int pos)
 
 int	calculate_rotate_ba(int *stack_a, int *stack_b, int *size, int pos)
 {
-	int	i;
-	int	j;
+	int i;
 
-	j = 0;
 	i = calculate_rrr_a(stack_a, stack_b, size, pos);
-	while (j < size[1])
+	while (pos < size[1])
 	{
 		if (i > calculate_rr_a(stack_a, stack_b, size[0], pos))
 			i = calculate_rr_a(stack_a, stack_b, size[0], pos);
@@ -74,7 +72,6 @@ int	calculate_rotate_ba(int *stack_a, int *stack_b, int *size, int pos)
 		if (i > calculate_rrarb_a(stack_a, stack_b, size[0], pos))
 			i = calculate_rrarb_a(stack_a, stack_b, size[0], pos);
 		pos++;
-		j++;
 	}
 	return (i);
 }
