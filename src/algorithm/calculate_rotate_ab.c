@@ -6,7 +6,7 @@
 /*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 16:40:08 by pibreiss          #+#    #+#             */
-/*   Updated: 2025/03/22 22:05:39 by pibreiss         ###   ########.fr       */
+/*   Updated: 2025/03/23 03:17:30 by pibreiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,8 @@ int	calculate_rr_b(int *stack_a, int *stack_b, int s_b, int pos)
 	int	i;
 
 	i = find_place_in_b(stack_a, stack_b, s_b, pos);
-	if (i < pos)
-		i = pos;
+	if (i < pos - 1)
+		i = pos - 1;
 	return (i);
 }
 
